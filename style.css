@@ -709,25 +709,29 @@ animation-timeline: view();
 animation-range: entry; 
 }
 .nous-contacter{
-justify-content: center;
-flex-direction: column;
-padding: 10px 20px;
-margin-left: 590px;
-background-color: #232323;
-color: #fff;
-text-decoration: none;
-border:  1px solid;
-border-top: 0px;
-border-left: 0px;
-border-right: 0px;
-border-color: #A1FFC7;
-cursor: pointer;
-text-align: center;
-font-size: 26px;
-font-weight: lighter;
-font-family: Roboto;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #232323;
+    color: #fff;
+    text-decoration: none;
+    border:  1px solid;
+    border-radius: 10px;
+    border-color: #A1FFC7;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: Roboto;
+    opacity: 0.8;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range: entry; 
+    }
+    .nous-contacter:hover {
+    background-color: #232323;
+    }
 
-}
+
 
 
 /*Animation--------------------------------------------*/
@@ -774,7 +778,7 @@ to{scale: 1; opacity: 1;}
 
 
 /* General Responsive Layout */
-@media (max-width: 428px) {
+@media (max-width: 1024px) {
   /* Parandalon shfaqjen e shiritit horizontal */
 html, body {
   overflow-x: hidden; /* Fsheh çdo përmbajtje që del jashtë ekranit horizontalisht */
@@ -1016,11 +1020,18 @@ html, body {
     background-color: rgba(0, 0, 0, 0.3); /* Shto një sfond të lehtë me transparencë */
 
   }
+ 
+  .hero{
+    margin: 20px;
+    align-items:flex-start
+  }
   .hero h1{
+    margin-left: 145px;
     font-size: 22px; /* Për mobile, redukto madhësinë e titullit h1 */
     margin-bottom: 15px; /* Redukto distancën lart-poshtë */
   }
   .hero p{
+    text-align: center;
     font-size: 18px; /* Për mobile, redukto madhësinë e nëntitullit h2 */
   }
   .about {
