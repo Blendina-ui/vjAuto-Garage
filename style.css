@@ -1,0 +1,1093 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background-color: #232323;
+}
+
+#header {
+    background-color: #232323
+}
+/* NavBar --------------------------------------------- */
+.navbar {
+  background-color: #232323;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+.navigation {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+.navigation a {
+  display: block;
+  padding: 10px 20px;
+  color: #E8E3E3;
+  text-decoration: none;
+  
+}
+.navigation li {
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+
+.navigation li a {
+  color: rgb(10, 10, 10);
+  font-family: "Roboto";
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  font-weight: bold;
+  display: block;
+  color: #E8E3E3;
+  text-align: left;
+  padding: 10px 10px;
+  text-decoration: none;
+  width: fit-content; 
+}
+
+.navigation li a:hover {
+  color: #A1FFC7;
+}
+
+.navigation a.current_item{
+  border-bottom: 1px solid #E8E3E3;
+  color: #A1FFC7;
+ }
+
+ /* SubMenu --------------------------------------------- */
+
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: #232323;
+  list-style: none;
+  flex-direction: column;
+  padding-left: 20px;
+  margin: 0;
+  min-width: 150px;
+  z-index: 1010;
+  left: 0; /* Align the submenu to the left */
+}
+.submenu li {
+  display: block;
+}
+/* Stilet për linket brenda submenu */
+.submenu li a {
+  color: #E8E3E3;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 0;
+  padding-left: 15px; /* Një distancë për t'i dhënë submenu-s një pamje të qartë */
+}
+.submenu li a:hover {
+  color: #A1FFC7; /* Ndrysho ngjyrën kur kalon miun mbi lidhjet e submenu-s */
+}
+.navigation li:hover .submenu {
+  display: flex; /* Trego submenu-n kur 'Service' është në hover */
+}
+
+/* BurgerMenu --------------------------------------------- */
+
+#menu-toggle {
+  display: none;/* Hide checkbox */  
+   
+}
+.burger-menu {
+  display: none; /* Initially hide burger menu icon */
+  font-size: 30px;
+  cursor: pointer;
+  color: #E8E3E3;  
+  position: absolute; /* Allow for positioning within the navbar */
+  left: 20px; /* Move burger menu to the left side */
+  top: 50%; /* Vertically center the burger menu */
+  transform: translateY(-50%); /* Adjust for vertical alignment */
+}
+
+/* Accueil --------------------------------------------- */
+
+/* -------- 1st image avec le texte -------*/
+
+.flex_imgPageAccueil{
+  display: flex;
+  width: 100%;
+}
+
+.box-image{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+ 
+}
+.box-image img{
+  width: 100%;
+  
+}
+.headtitle_accueil{
+position: absolute;
+font-size: 30px;
+width: 100%;
+font-family: Roboto;
+text-align: center;
+}
+.headtitle_accueil h2{
+font-size: 28px;
+}
+
+.headtitle {
+position: absolute;
+font-family: Roboto;
+width: 100%;
+font-size: 30px;
+background-color: rgba(35, 35, 35, 0.209);
+text-align: center;
+color: #E8E3E3;
+}
+
+
+.box-image h1{
+  position: relative;
+  left: 40px;
+  color: #E8E3E3;
+  text-transform: uppercase;
+  text-shadow: 10px 10px 10px black;
+}
+
+.box-image h2{
+  color:#E8E3E3;
+  text-transform: uppercase;
+  text-shadow: 10px 10px 10px black;
+}
+
+/* -------- titre image avec et le texte -------*/
+.conteneur_presentation{
+ display: flex;
+ align-items: center;
+ margin-bottom: 80px;
+}
+.title_presentation{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Roboto;
+  text-transform: uppercase;
+  color: #E8E3E3;
+  margin-top: 120px;
+  margin-bottom: 60px;
+  font-size: 45px;
+  text-shadow: 13px 13px 13px #02411b;
+  opacity: 0.8;
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+.img_presentation{
+  flex: 0 0 auto;
+  padding: 20px;
+}
+.txt_presentation{
+  color: #E8E3E3;
+  font-size: 18px;
+  font-family:Poppins;
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.img_presentation img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 4%;
+  box-shadow: 10px 10px 10px rgba(111, 106, 106, 0.229);
+}
+/* -------- 2eme titre avec les trois images et liens -------*/
+.conteneur_txtservices h1{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #E8E3E3;
+  margin-top: 140px;
+  margin-bottom: 60px;
+  font-size: 45px;
+  font-family: Roboto;
+  font-weight: bold;
+  text-shadow: 10px 10px 10px black;
+}
+.conteneur_txtservices h1,
+.conteneur_txtservices h2{
+opacity: 0.8;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry;
+}
+.conteneur_txtservices h2{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Roboto;
+  text-transform: uppercase;
+  color: #E8E3E3;
+  margin-top: 15px;
+  font-size: 30px;
+  text-shadow: 10px 10px 10px black;
+  margin-bottom: 90px;
+}
+
+.conteneur_imgservices {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  margin-bottom: 200px;
+}
+
+.img_service {
+  position: relative;
+  display: inline-block; /* Afficher les blocs en ligne */
+  margin: 10px;
+}
+.img_service img{
+  border-radius: 4%;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 130px;
+  left: 50px;
+  right: 50px;
+  text-align: center;
+  color: white;
+  text-shadow: 10px 10px 10px black;
+  padding: 5px;
+  font-size: 25px;
+  font-family: Roboto;
+  text-transform: uppercase;
+}
+
+
+.img_service:hover {
+  cursor: pointer; /* Changer le curseur au survol */
+  transform: scale(1.05); /* Effet d'agrandissement au survol */
+}
+
+.img_service:active {
+  transform: scale(0.95); /* Réduire légèrement la taille lorsqu'ils sont cliqués */
+}
+
+/* -------- 3eme titre l'image le texte et le button -------*/
+.conteneur_contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  color: #E8E3E3;
+  
+}
+
+
+h1 {
+  font-size: 45px;
+  font-family: Roboto;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 80px;
+  text-shadow: 10px 10px 10px black;
+  opacity: 0.8;
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: entry; 
+}
+
+
+.img_contact {
+  display: flex;
+  align-items: flex-start;
+}
+
+.img_contact img {
+  max-width: 50%;
+  margin-right: 20px;
+  padding: 40px;
+  border-radius: 50%;
+}
+
+.txt_contact h2{
+  flex: 1;
+  text-align: left;
+  font-size: 25px;
+  font-family: Poppins;
+}
+.txt_contact p{
+  flex: 1;
+  text-align: left;
+  font-size: 20px;
+  font-family: Poppins;
+}
+.paragraph_contact {
+  font-size: 16px;
+  height: calc(6 * 1.5em); /* Calcul de la hauteur en fonction de la taille de la ligne */
+  overflow: hidden; /* Pour cacher tout contenu dépassant la hauteur spécifiée */
+  line-height: 1.5em; 
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #232323;
+  color: #fff;
+  text-decoration: none;
+  border:  2px solid;
+  border-radius: 15px;
+  border-color: #A1FFC7;
+  cursor: pointer;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto;
+  box-shadow: 10px 10px 10px rgba(111, 106, 106, 0.229);
+}
+
+
+.contact-button:hover {
+  background-color: #232323;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* ---------------Mécanique------------------------------*/
+
+.service-section {
+display: flex;
+margin-bottom: 20px;
+}
+
+.service-section .text-content,
+.service-section .image-content {
+flex: 1;
+flex-basis: 50%;
+padding: 20px;
+box-sizing: border-box;
+}
+
+.service-section .text-content {
+width: 50%;
+color: #E8E3E3;
+}
+
+.service-section .text-content h1 {
+font-size: 35px;
+font-family: Roboto;
+}
+
+.service-section .text-content p {
+font-size: 18px;
+font-family: Poppins;
+}
+
+.service-section .image-content {
+display: flex;
+align-items: stretch;
+}
+
+.service-section .image-content img {
+width: 100%;
+height: 302px;
+margin-top: 60px;
+border-radius: 10px;
+object-fit: cover;
+}
+
+.service-section .diagnostique_contenu {
+flex-direction: row;
+}
+
+.service-section .changementpiece_contenu {
+flex-direction: row-reverse;
+}
+
+.service-section .examenvehicule_contenu {
+flex-direction: row;
+}
+
+
+
+
+
+/* Grand Service ---------------------------------------*/
+
+
+/* Entretien Complet -------------------------------------------------*/
+
+
+
+.flex_imgEntretienComplpet{
+width: 100%;
+height: 540px;
+object-fit: cover;
+object-position: center center;
+}
+
+/* Côntrole Technique -------------------------------------------*/
+.img_ControleTechnique{
+width: 100%;
+height: 530px;
+object-fit: cover;
+object-position: center center;
+}
+/*Contact -------------------------------------------*/
+.contact h1  {
+margin-bottom: 30px;
+padding: 20px;
+width: 100%;
+text-align: left;
+background: #232323;
+color: #E8E3E3;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.container-contact {
+display: flex;
+justify-content: center; 
+align-items: center; 
+width: 80%;
+max-width: 1200px; 
+margin-top: 50px;
+margin-left: 80px;
+}
+.contact-info, .contact-form {
+flex: 1;
+padding: 20px;
+margin: 10px;
+min-width: 200px;  
+}
+form input{
+outline: none;
+}
+textarea{
+outline: none;
+}
+.contact-form h2{
+color: #E8E3E3;
+font-size: 24px;
+font-weight: bold;
+font-family: Roboto;
+text-transform: uppercase;
+}
+.contact-info h2{
+color: #E8E3E3;
+font-size: 24px;
+font-weight: bold;
+font-family: Roboto;
+text-transform: uppercase;
+}
+.contact-info p, .contact-info a {
+display: flex;
+align-items: center;
+margin: 8px 0;
+color: #E8E3E3;
+font-size: 18px;
+font-weight: lighter;
+font-family: Poppins;
+}
+.contact-info a:hover{
+color: #A1FFC7;
+}
+.contact-info i {
+margin-right: 10px;
+color: #E8E3E3;
+}
+.contact-form input, .contact-form textarea {
+background: none;
+border: none;
+border-bottom: 2px solid #ccc; 
+padding: 8px;
+margin: 10px 0;
+width: 100%;
+box-sizing: border-box;
+color: #E8E3E3;
+font-size: 16px;
+font-family: Roboto;
+}
+.contact-form label {
+font-weight: bold;
+font-size: 18px;
+color: #E8E3E3;
+display: block; 
+font-family: Roboto;
+}
+button {
+display: inline-block;
+padding: 10px 20px;
+background-color: #232323;
+color: #fff;
+text-decoration: none;
+border:  1px solid;
+border-radius: 10px;
+border-color: #A1FFC7;
+cursor: pointer;
+text-align: center;
+font-size: 20px;
+font-weight: lighter;
+font-family: Roboto;
+opacity: 0.8;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry; 
+}
+button:hover {
+background-color: #232323;
+}
+
+.img_Contact{
+width: 100%;
+height: 550px;
+object-fit: cover;
+object-position: center center;
+}
+
+
+/* Footer ---------------------------------------------*/
+
+footer {
+background-color: #232323;
+color: #E8E3E3;
+text-align: center;
+padding: 30px 0  0px;
+font-family: Roboto;
+text-transform: uppercase;
+margin-top: 350px;
+border-top: 0.5px solid #A1FFC7 ;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-around;
+align-items: flex-start;
+width: 80%;
+margin: 0 auto;
+line-height: 28px;
+
+}
+
+.footer-block {
+margin: 0 10px; /* Assure un peu d'espace entre chaque bloc */
+}
+
+footer h3 {
+margin-top: 5px;
+color: #E8E3E3;
+}
+
+footer p {
+margin: 5px 0;
+}
+
+footer a {
+color: #E8E3E3;
+text-decoration: none;
+}
+
+footer a:hover {
+text-decoration: underline;
+color: #A1FFC7;
+}
+.footer-content h3{
+font-size: 24px;
+font-weight: lighter;
+color: #A1FFC7;
+}
+.footer-content p{
+font-size: 14px;
+font-family: Poppins;
+font-weight: normal;
+text-transform: capitalize;
+}
+
+/*-------------A propos------------*/
+
+
+.hero {
+height: 300px;
+display: flex;
+flex-direction: column;
+margin: 80px 150px;
+justify-content: center;
+align-items: center;
+color: #E8E3E3;
+}
+
+
+.hero h1 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+font-weight: bold;
+font-family: Roboto;
+text-transform: uppercase;
+color: #E8E3E3;
+margin-top: 120px;
+margin-bottom: 80px;
+font-size: 55px;
+text-shadow: 13px 13px 13px #030303;
+opacity: 0.8;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry;
+}
+
+.hero p {
+display: flex;
+flex-direction: column;
+color: #E8E3E3;
+font-family: Poppins;
+font-size: 24px;
+font-weight: lighter;
+opacity: 0.8;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry; 
+
+} 
+
+
+.about {
+display: flex;
+align-items: center;
+margin-bottom: 80px;
+justify-content: flex-end;
+padding: 20px 20px;
+
+}
+
+
+.about-image img{
+height: 500px;
+width: 500px;
+border-radius: 50%;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry; 
+}
+
+.about-content p{
+color: #E8E3E3;
+font-size: 18px;
+font-family:Poppins;
+text-align: left;
+padding-left: 15px;
+padding-right: 15px;
+line-height: 1.5em; 
+}
+
+.about-content h2{
+color: #E8E3E3;
+font-family: Roboto;
+text-transform: uppercase;
+font-size: 35px;
+text-align: left;
+padding-right: 20px;
+margin: 60px 20px;
+opacity: 0.8;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry; 
+}
+.nous-contacter{
+justify-content: center;
+flex-direction: column;
+padding: 10px 20px;
+margin-left: 590px;
+background-color: #232323;
+color: #fff;
+text-decoration: none;
+border:  1px solid;
+border-top: 0px;
+border-left: 0px;
+border-right: 0px;
+border-color: #A1FFC7;
+cursor: pointer;
+text-align: center;
+font-size: 26px;
+font-weight: lighter;
+font-family: Roboto;
+
+}
+
+
+/*Animation--------------------------------------------*/
+
+.service-section .text-content h1{
+opacity: 0.8;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry; 
+
+}
+.changement-pneus .text-content h1{
+opacity: 0.8;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry; 
+}
+.vidange-entretien .text-content h1{
+opacity: 0.8;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry; 
+}
+.processus-reparation .text-content h1{
+opacity: 0.8;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry; 
+}
+.animation-view{
+opacity: 0.8;
+animation: fade-in linear;
+animation-timeline: view();
+animation-range: entry; 
+}
+@keyframes fade-in {
+from{scale: .8; opacity: 0;}
+to{scale: 1; opacity: 1;}
+}
+
+
+
+/* Media Queries for Responsive Design --------------------------------------------- */
+
+
+/* General Responsive Layout */
+@media (max-width: 428px) {
+  /* Parandalon shfaqjen e shiritit horizontal */
+html, body {
+  overflow-x: hidden; /* Fsheh çdo përmbajtje që del jashtë ekranit horizontalisht */
+  margin: 0;
+  padding: 0;
+}
+  
+  #header {
+    background-color: #232323;
+    height: 50px;
+}
+  .navbar {
+    background-color: #232323;
+    display: flex;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 999;
+    max-width: 100%; /* Siguro që nuk tejkalon prindin */
+    width: 100%; /* Bëje navbar të zërë vetëm gjerësinë e prindit */
+  }
+
+  /* Trego burger menu në mobile */
+  .burger-menu {
+    display: block; /* Bëje burger menu të dukshme në ekranet e vogla */
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    max-width: 100%; /* Siguro që ikona e menu-burger të mos tejkalojë gjerësinë */
+    font-size: 30px;
+    color: #E8E3E3;
+    cursor: pointer;
+    padding-left: 10px; /* Pak padding për distancë të vogël nga skaji */
+  }
+  
+  /* Fshih menunë normale në mobile fillimisht */
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Poziciono menunë nën ikonën e burger menu */
+    left: 0px;
+    width: auto; /* Gjerësia përcaktohet nga teksti */
+    background-color: #232323;
+    padding: 10px;
+    transition: opacity 0.3s ease; /* Efekt i butë shfaqjeje */
+    z-index: 999;
+    
+  }
+   /* Stilet për lidhjet e menusë */
+   .navigation li {
+    list-style: none;
+    margin: 10px 0;
+  }
+
+  .navigation li a {
+    color: #E8E3E3;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    padding: 10px 20px;
+  }
+
+  .navigation li a:hover {
+    color: #A1FFC7;
+  }
+    /* Bëje navigacionin të shfaqet kur burger menu është klikuar */
+    #menu-toggle:checked + .burger-menu + .navigation {
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+    }
+
+     /* Submenu në mobile - e fshehur fillimisht */
+  .submenu {
+    display: none; /* Fsheh submenu fillimisht */
+  }
+
+  /* Trego submenu-n kur Service është në fokus ose klikim */
+  .navigation li:focus-within .submenu {
+    display: flex;
+  }
+
+  /* Accueil -------------------------------------------------- */
+  .box-image {
+    width: 100%; /* Bëje imazhin të zërë 100% të gjerësisë së ekranit */
+  }
+
+  .box-image img {
+    width: 100%; /* Sigurohu që imazhi gjithashtu të jetë responsive */
+    height: auto; /* Përshtate lartësinë sipas gjerësisë */
+  }
+
+    /* Për headtitle_accueil */
+    .headtitle_accueil {
+      width: 100%; /* Bëje titullin të zërë 100% të prindit */
+      max-width: 100%; /* Siguro që nuk tejkalon gjerësinë e prindit */
+      padding: 0; /* Siguro që padding nuk shtohet jashtë përmasave */
+      margin: 0 auto; /* Qendro titullin në qendër */
+      text-align: center; /* Qendro tekstin në qendër */
+
+    }
+  .headtitle_accueil h1 {
+    font-size: 20px; /* Për mobile, redukto madhësinë e titullit h1 */
+    text-align: left;
+    margin-bottom: 8px;
+    margin-left: 18px;
+    padding: 5px 10px; /* Shto pak padding për të rregulluar hapësirën rreth tekstit */
+    border-radius: 5px;
+  }
+
+  .headtitle_accueil h2 {
+    font-size: 14px; /* Për mobile, redukto madhësinë e titullit h2 */
+    text-align: left;
+
+  }
+
+  .headtitle_accueil {
+    padding: 10px; /* Shto pak padding për distancë nga skajet në mobile */
+    text-align: center; /* Qendro tekstin për një pamje më të mirë në mobile */
+  }
+
+  .title_presentation h1 {
+    font-size: 22px; /* Për mobile, redukto madhësinë e titullit h1 */
+    margin: 0px 0px;  /* Redukto margin për më shumë hapësirë në mobile */
+  }
+
+  .conteneur_presentation {
+    flex-direction: column; /* Vendos imazhin dhe tekstin njëri mbi tjetrin */
+    text-align: center; /* Qendro tekstin për një pamje më të mirë në mobile */
+  }
+
+  .img_presentation {
+    margin-bottom: 20px; /* Shto pak hapësirë poshtë imazhit */
+    width: 350px;
+  }
+
+  .txt_presentation {
+    max-width: 100%; /* Bëje tekstin të marrë 100% të gjerësisë në mobile */
+    padding-left: 0; /* Hiq padding-un për të qendruar gjithçka */
+  }
+
+  .txt_presentation p {
+    padding: 0 10px; /* Shto pak padding horizontal për të mos u ngjitur me skajin */
+    font-size: 14px;
+  }
+  .conteneur_txtservices h1 {
+    font-size: 22px; /* Për mobile, redukto madhësinë e titullit h1 */
+    margin-bottom: 15px; /* Redukto distancën lart-poshtë */
+  }
+
+  .conteneur_txtservices h2 {
+    font-size: 18px; /* Për mobile, redukto madhësinë e nëntitullit h2 */
+    margin-bottom: 25px;
+  }
+  .conteneur_imgservices {
+    flex-direction: column; /* Bëj që imazhet të jenë njëra poshtë tjetrës në mobile */
+    align-items: center; /* Qendro imazhet në qendër në mobile */
+    gap: 20px; /* Hapësirë mes imazheve */
+  }
+
+  .img_service {
+    width: 350px; /* Bëje secilin imazh të marrë gjerësinë e plotë të prindit në mobile */
+    height: 350px;
+  }
+
+  .img_service img {
+    max-width: 100%; /* Bëje imazhin të marrë gjerësinë e plotë në mobile */
+  }
+  .conteneur_contact {
+    flex-direction: column; /* Në mobile, vendos përmbajtjen vertikalisht */
+    align-items: center; /* Qendro të gjithë përmbajtjen në qendër */
+    gap: 20px; /* Hapësirë mes elementeve */
+  }
+  .conteneur_contact h1{
+    font-size: 22px; /* Për mobile, redukto madhësinë e titullit h1 */
+    margin-bottom: 15px; /* Redukto distancën lart-poshtë */
+  }
+
+  .img_contact {
+    flex-direction: column; /* Bëj imazhin dhe tekstin vertikal në mobile */
+    align-items: center; /* Qendro elementet në qendër në mobile */
+  }
+
+  .img_contact img {
+    width: 100%; /* Bëje imazhin të marrë 100% të gjerësisë në mobile */
+    
+  }
+  .txt_contact h2 {
+    font-size: 18px; /* Për mobile, redukto madhësinë e nëntitullit h2 */
+    margin-bottom: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .txt_contact p {
+    font-size: 14px; /* Për mobile, redukto madhësinë e nëntitullit h2 */
+    margin-bottom: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .contact-button {
+    width: 150px;
+    font-size: 18px;
+    box-shadow: 2px 2px 2px rgba(111, 106, 106, 0.229);
+    color: #fff;
+    text-decoration: none;
+    border:  1px solid;
+    border-radius: 15px;
+    border-color: #A1FFC7;
+    cursor: pointer; 
+  }
+  .contact-button:hover {
+    background-color: #232323;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .footer-content {
+    flex-direction: column; /* Vendos blloqet e footer-it njëra pas tjetrës vertikalisht */
+    align-items: center; /* Qendro kolonat në qendër në mobile */
+    gap: 25px; /* Hapësirë mes elementeve */
+  }
+
+  .footer-block {
+    gap: 20px;
+    max-width: 100%; /* Bëje secilin bllok të zërë 100% të gjerësisë në mobile */
+    text-align: center; /* Qendro tekstin për një pamje më të mirë në mobile */
+  }
+  /* A Propos ------------------------------------------------------------------------------------------------ */
+  .headtitle h1{
+    font-size: 20px; /* Për mobile, redukto madhësinë e titullit h1 */
+    text-align: left;
+    margin-left: 18px;
+    width: fit-content; /* Bëje gjerësinë të përshtatet me përmbajtjen */
+    background-color: rgba(0, 0, 0, 0.3); /* Shto një sfond të lehtë me transparencë */
+
+  }
+  .hero h1{
+    font-size: 22px; /* Për mobile, redukto madhësinë e titullit h1 */
+    margin-bottom: 15px; /* Redukto distancën lart-poshtë */
+  }
+  .hero p{
+    font-size: 18px; /* Për mobile, redukto madhësinë e nëntitullit h2 */
+  }
+  .about {
+    display: flex;
+    flex-direction: column-reverse; /* Bëj që fotoja të jetë e para dhe përmbajtja pas saj në mobile */
+    align-items: center; /* Qendro përmbajtjen në qendër */
+  }
+
+  .about-content, .about-image {
+    max-width: 100%; /* Bëje secilin bllok të zërë të gjithë gjerësinë në mobile */
+  }
+
+  .about-content {
+    text-align: center; /* Qendro tekstin për një pamje më të mirë në mobile */
+  }
+
+  .about-image img {
+    max-width: 100%; /* Bëje imazhin të marrë gjerësinë e plotë në mobile */
+  }
+
+  /* Për qendrimin e butonit */
+  .nous-contacter {
+    text-align: center; /* Qendro tekstin brenda butonit */
+    display: block; /* Butoni të sillet si bllok për të qendruar më lehtë */
+    width: fit-content; /* Butoni të marrë madhësinë e tekstit brenda */
+    margin: 20px auto; /* Qendro butonin me auto për të barazuar distancat nga anët */
+  }
+  /* Contact -------------------------------------------------------------------------------------------------- */
+  .container-contact {
+    flex-direction: column; /* Bëj që elementet të jenë vertikalisht në mobile */
+  }
+
+  .contact-info {
+    order: 1; /* Bëje div-in `contact-info` të shfaqet i pari */
+  }
+
+  .contact-form {
+    order: 2; /* Bëje div-in `contact-form` të shfaqet i dyti */
+  }
+
+  .contact-info, .contact-form {
+    width: 100%; /* Bëje secilin bllok të marrë 100% të gjerësisë në mobile */
+    text-align: left; /* Qendro përmbajtjen për një pamje më të pastër në mobile */
+  }
+
+  /* Mecanique --------------------------------------------------------------------------------------------------- */
+  .service-section
+  {
+   flex-direction: column-reverse;
+  }
+  .service-section .text-content {
+  order: 1;
+  width: 100%;
+  text-align: left;
+  }
+  .diagnostique_contenu h1,
+.changementpiece_contenu h1,
+.examenvehicule_contenu h1
+  {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .diagnostique_contenu p,
+.changementpiece_contenu p,
+.examenvehicule_contenu p 
+  {
+    font-size: 10px;
+  }
+}
