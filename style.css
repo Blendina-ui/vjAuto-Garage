@@ -397,7 +397,7 @@ h1 {
   background-color: #232323;
   color: #fff;
   text-decoration: none;
-  border:  2px solid;
+  border:  1px solid;
   border-radius: 15px;
   border-color: #A1FFC7;
   cursor: pointer;
@@ -405,7 +405,7 @@ h1 {
   font-size: 30px;
   font-weight: bold;
   font-family: Roboto;
-  box-shadow: 10px 10px 10px rgba(111, 106, 106, 0.229);
+ 
 }
 
 
@@ -751,28 +751,42 @@ animation: fade-in linear;
 animation-timeline: view();
 animation-range: entry; 
 }
-.nous-contacter{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #232323;
-    color: #fff;
-    text-decoration: none;
-    border:  1px solid;
-    border-radius: 10px;
-    border-color: #A1FFC7;
-    cursor: pointer;
-    text-align: center;
-    font-size: 20px;
-    font-weight: lighter;
-    font-family: Roboto;
-    opacity: 0.8;
-    animation: fade-in linear;
-    animation-timeline: view();
-    animation-range: entry; 
-    }
-    .nous-contacter:hover {
-    background-color: #232323;
-    }
+
+/* Stili për qendrimin e butonit në mes */
+.nous-contacter {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #232323;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #A1FFC7;
+  cursor: pointer;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto;
+  opacity: 0.8;
+  margin: 20px auto; /* Qendron butonin horizontalisht */
+  display: block; /* Bën që butoni të sillet si bllok */
+}
+
+/* Opsional: Në hover mund të ketë një efekt */
+.nous-contacter:hover {
+  background-color: #232323;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+/* Për prindin e butonit që do ta qendrojë */
+.parent-container {
+  display: flex;
+  justify-content: center; /* Qendron përmbajtjen horizontalisht */
+  align-items: center; /* Qendron përmbajtjen vertikalisht */
+  flex-direction: column; /* Qendron vertikalisht nëse ka më shumë elemente */
+}
+
 
 
 
