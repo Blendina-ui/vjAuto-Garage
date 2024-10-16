@@ -102,6 +102,49 @@ body {
   display: flex; /* Trego submenu-n kur 'Service' është në hover */
 }
 
+/* Contact-info-accueil ------------------------------------- */
+/* Stili për desktop */
+.contact-info-accueil {
+  display: flex;
+  flex-direction: column; /* Rreshtim vertikal */
+  align-items: flex-start; /* Poziciono në të majtë */
+  justify-content: center;
+  position: absolute;
+  left: 20px; /* Pozicion në anën e majtë të header-it */
+  top: 50%; /* Qendro vertikalisht */
+  transform: translateY(-50%); /* Vertikalisht në mes të header-it */
+  gap: 8px; /* Hapsirë midis elementëve vertikalisht */
+  max-height: 100px; /* Limito lartësinë */
+}
+
+.contact-info-accueil h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #E8E3E3; /* Ngjyra e titullit */
+}
+
+.contact-info-accueil p {
+  margin: 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center; /* Për rreshtimin e ikonave dhe tekstit */
+}
+.contact-info-accueil i {
+  margin-right: 8px; /* Hapsirë mes ikonës dhe tekstit */
+  color: #E8E3E3; /* Ngjyra e ikonave */
+}
+
+.contact-info-accueil a {
+  color: #E8E3E3; /* Ngjyra e telefonit dhe email-it */
+  text-decoration: none;
+}
+
+.contact-info-accueil a:hover {
+  text-decoration: underline;
+  color: #A1FFC7;
+}
+
+
 /* BurgerMenu --------------------------------------------- */
 
 #menu-toggle {
@@ -1101,4 +1144,38 @@ html, body {
   {
     font-size: 10px;
   }
+  .contact-info-accueil {
+    flex-direction: column; /* Rreshtim vertikal */
+    align-items: flex-end; /* Poziciono në të djathtë për mobile */
+    right: 60px; /* Pozicion në të djathtë */
+    text-align: left; /* Teksti në të majtë */
+    left: unset; /* Hiq pozicionimin nga e majta */
+    top: 10px; /* Pozicion më lart në mobile */
+    transform: none; /* Hiq transformimin për të ruajtur qendrim natyror */
+    gap: 5px; /* Hapsirë më e vogël për mobile */
+    max-height: 100px; /* Kufizo lartësinë për mobile */
+  }
+  /* Rreshto përmbajtjen brenda p dhe h3 në të majtë */
+.contact-info-accueil p, .contact-info-accueil h3 {
+  display: flex;
+  justify-content: flex-start; /* Rreshto tekstin dhe ikonat në të majtë */
+  text-align: left;
+  width: 100%; /* Sigurohu që përmbajtja të marrë 100% gjerësinë e kutisë */
+}
+
+.contact-info-accueil i {
+  margin-right: 5px; /* Hapsirë midis ikonës dhe tekstit */
+}
+
+.contact-info-accueil a {
+  font-size: 12px;
+  color: #E8E3E3;
+  text-decoration: none;
+  text-align: left; /* Rreshto tekstin e linkut në të majtë */
+}
+
+.contact-info-accueil a:active {
+  text-decoration: underline;
+  color: #A1FFC7;
+}
 }
